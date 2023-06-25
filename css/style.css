@@ -132,6 +132,7 @@ img {
 
 a {
   color: inherit;
+  -webkit-tap-highlight-color: transparent; /* 強調をなくす */
 }
 
 .section {
