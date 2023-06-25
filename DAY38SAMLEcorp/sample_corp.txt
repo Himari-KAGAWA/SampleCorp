@@ -1,0 +1,66 @@
+sample_corp
+form
+ラジオボタンのhover,focus
+のスタイル　sass例
+`
+.contact__radio-input {
+position: absolute;
+opacity: 0;
+
+
+& + .contact__radio-part {
+
+    &:hover {
+        &::before {
+            border: 1px solid $blue-color;
+            box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #707070;
+
+    }
+
+    &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $blue-color;
+        opacity: 0;
+    }
+}
+
+
+
+&:checked + .contact__radio-part {
+    &::after {
+        opacity: 1;
+    }
+
+}
+
+&:focus + .contact__radio-part {
+    &::before {
+        border: 1px solid $blue-color;
+        background: rgba(73, 115, 255, 0.2);
+    }
+}
+
+}
+
+
+`
